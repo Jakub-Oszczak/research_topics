@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mailing Service Popup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Popup container (optional) -->
+  <div class="popup-container">
+
+    <!-- Step 1: MitID Login Screen -->
+    <div id="mitid-login-screen" class="screen active">
+      <img src="https://via.placeholder.com/150?text=MitID+Logo" alt="MitID Logo" class="mitid-logo" />
+      <h2>MitID Login</h2>
+      <div class="form-group">
+        <label for="mitid-username">MitID Username</label>
+        <input type="text" id="mitid-username" placeholder="Enter your MitID username" />
+      </div>
+      <button id="login-button" class="btn-primary">Log In</button>
+    </div>
+
+    <!-- Step 2: Mockup QR Code Screen -->
+    <div id="qr-code-screen" class="screen">
+      <h2>Scan the QR code with your MitID App</h2>
+      <img src="https://via.placeholder.com/200?text=Mockup+QR+Code" alt="Mockup QR Code" class="qr-code" />
+    </div>
+
+    <!-- Step 3: Email Selection Screen -->
+    <div id="email-selection-screen" class="screen">
+      <h2>Select an Email</h2>
+      <div id="email-list"></div>
+      <div class="small-link-container">
+        <a id="go-to-registration" href="#">Register a new email</a>
+      </div>
+    </div>
+
+    <!-- Step 4: User Info Screen -->
+    <div id="user-info-screen" class="screen">
+      <h2>User Information</h2>
+      <div id="user-info"></div>
+      <button id="close-button" class="btn-primary">Close</button>
+    </div>
+
+    <!-- Step 5: Registration Screen -->
+    <div id="registration-screen" class="screen">
+      <h2>Register New Email</h2>
+      <div class="form-group">
+        <label for="reg-email">Email</label>
+        <input type="email" id="reg-email" placeholder="Enter new email" />
+      </div>
+      <div class="form-group">
+        <label for="reg-password">Password</label>
+        <input type="password" id="reg-password" placeholder="Enter password" />
+      </div>
+
+      <!-- Dropdown for Email Purpose -->
+      <div class="form-group">
+        <label for="reg-purpose">Email Purpose</label>
+        <select id="reg-purpose">
+          <option value="">-- Select a Purpose --</option>
+          <option value="marketing">Marketing</option>
+          <option value="standard">Standard</option>
+          <option value="notifications">Notifications</option>
+          <option value="newsletter">Newsletter</option>
+        </select>
+      </div>
+
+      <!-- Dropdown for Account Type -->
+      <div class="form-group">
+        <label for="reg-account-type">Account Type</label>
+        <select id="reg-account-type">
+          <option value="">-- Select an Account Type --</option>
+          <option value="company">Company</option>
+          <option value="personal">Personal</option>
+        </select>
+      </div>
+
+      <button id="register-button" class="btn-primary">Register</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
