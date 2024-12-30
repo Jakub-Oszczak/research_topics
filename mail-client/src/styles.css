@@ -1,0 +1,246 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef1f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Inbox Container */
+  .inbox-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  .inbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .inbox-actions button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+  }
+  
+  .compose-button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .compose-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .logout-button {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .logout-button:hover {
+    background-color: #a71d2a;
+  }
+  
+  /* Email Count */
+  .email-count {
+    margin: 15px 0;
+    color: #666;
+  }
+  
+  /* Email List */
+  .email-list {
+    border-top: 1px solid #ccc;
+  }
+  
+  .email-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    position: relative;
+  }
+  
+  .email-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .email-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: bold;
+  }
+  
+  .email-sender {
+    font-size: 16px;
+    color: #007bff;
+  }
+  
+  .email-preview {
+    margin-top: 5px;
+    color: #555;
+  }
+  
+  /* No Emails Message */
+  .no-emails {
+    text-align: center;
+    color: #999;
+    padding: 20px 0;
+  }
+  
+  /* Buttons */
+  button {
+    font-family: inherit;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .prev-button,
+  .next-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .prev-button:hover,
+  .next-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .page-info {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Login and Compose Containers */
+  .login-container,
+  .compose-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Elements */
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  form button[type='submit'] {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  form button[type='submit']:hover {
+    background-color: #218838;
+  }
+  
+  form button[type='button'] {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  form button[type='button']:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .inbox-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .inbox-actions {
+      margin-top: 10px;
+    }
+  
+    .email-item {
+      padding: 10px;
+    }
+  }
+
+  /* Email Detail */
+  .email-detail-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .email-detail-container button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .email-detail-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .email-content {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #333;
+  }
