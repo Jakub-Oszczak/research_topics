@@ -1,0 +1,19 @@
+{
+    "b3808ed3-1ad1-4bec-8b77-2abb4e2ccdcf": {
+      "id": "b3808ed3-1ad1-4bec-8b77-2abb4e2ccdcf",
+      "sender_email": "john@example.com",
+      "receiver_email": "anne@example.com",
+      "email_tag": "standard",
+      "mitid_username": "john_mitid",
+      "text": "Hey Anne, here's some info about the project..."
+    },
+    "9c989573-89b6-4dab-ab56-b54b5082edaa": {
+      "id": "9c989573-89b6-4dab-ab56-b54b5082edaa",
+      "sender_email": "john_work@example.com",
+      "receiver_email": "john@example.com",
+      "email_tag": "marketing",
+      "mitid_username": "john_mitid",
+      "text": "Draft for new marketing material."
+    }
+  }
+  

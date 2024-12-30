@@ -4,83 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mailing Service Popup</title>
+  
+  <!-- Google Fonts (Poppins) for a modern look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" 
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="backdrop">
+    <div class="popup-container">
 
-  <!-- Popup container (optional) -->
-  <div class="popup-container">
-
-    <!-- Step 1: MitID Login Screen -->
-    <div id="mitid-login-screen" class="screen active">
-      <img src="https://via.placeholder.com/150?text=MitID+Logo" alt="MitID Logo" class="mitid-logo" />
-      <h2>MitID Login</h2>
-      <div class="form-group">
-        <label for="mitid-username">MitID Username</label>
-        <input type="text" id="mitid-username" placeholder="Enter your MitID username" />
+      <!-- VIEW #1: MitID Screen -->
+      <div id="view-mitid" class="view active-view">
+        <div class="view-heading">
+          <img 
+            src="https://via.placeholder.com/120x40?text=MitID+Logo" 
+            alt="MitID Logo" 
+            class="mitid-logo"
+          />
+          <h2>Log in with MitID</h2>
+        </div>
+        <label for="mitid-username">MitID Username:</label>
+        <input type="text" id="mitid-username" placeholder="Enter MitID username" />
+        <div class="error-message" id="error-mitid"></div>
+        <button id="btn-mitid-login" class="primary-btn">Log In</button>
       </div>
-      <button id="login-button" class="btn-primary">Log In</button>
-    </div>
-
-    <!-- Step 2: Mockup QR Code Screen -->
-    <div id="qr-code-screen" class="screen">
-      <h2>Scan the QR code with your MitID App</h2>
-      <img src="https://via.placeholder.com/200?text=Mockup+QR+Code" alt="Mockup QR Code" class="qr-code" />
-    </div>
-
-    <!-- Step 3: Email Selection Screen -->
-    <div id="email-selection-screen" class="screen">
-      <h2>Select an Email</h2>
-      <div id="email-list"></div>
-      <div class="small-link-container">
-        <a id="go-to-registration" href="#">Register a new email</a>
+      
+      <!-- VIEW #2: QR Code Screen -->
+      <div id="view-qr" class="view">
+        <h2>Scan this QR code with your MitID app</h2>
+        <img 
+          src="https://via.placeholder.com/200x200?text=QR+Code" 
+          alt="QR Code" 
+          class="qr-code-img"
+        />
+        <p class="qr-instructions">
+          Please wait... verifying your MitID on the server.
+        </p>
+        <!-- We'll also place an error message here, in case something fails after 2s -->
+        <div class="error-message" id="error-qr"></div>
       </div>
-    </div>
-
-    <!-- Step 4: User Info Screen -->
-    <div id="user-info-screen" class="screen">
-      <h2>User Information</h2>
-      <div id="user-info"></div>
-      <button id="close-button" class="btn-primary">Close</button>
-    </div>
-
-    <!-- Step 5: Registration Screen -->
-    <div id="registration-screen" class="screen">
-      <h2>Register New Email</h2>
-      <div class="form-group">
-        <label for="reg-email">Email</label>
-        <input type="email" id="reg-email" placeholder="Enter new email" />
+      
+      <!-- VIEW #3: Email Selection Screen -->
+      <div id="view-email-selection" class="view">
+        <h2>Select an Email</h2>
+        <p>Emails registered for this MitID:</p>
+        <select id="email-select"></select>
+        <div class="error-message" id="error-email-select"></div>
+        
+        <a href="#" id="link-register-email" class="link-register">Register a new email</a>
+        <br><br>
+        <button id="btn-select-email" class="primary-btn">Proceed</button>
       </div>
-      <div class="form-group">
-        <label for="reg-password">Password</label>
-        <input type="password" id="reg-password" placeholder="Enter password" />
-      </div>
-
-      <!-- Dropdown for Email Purpose -->
-      <div class="form-group">
-        <label for="reg-purpose">Email Purpose</label>
+      
+      <!-- VIEW #4: Registration Screen -->
+      <div id="view-registration" class="view">
+        <h2>Register New Email</h2>
+        
+        <label for="reg-email">Email:</label>
+        <input type="email" id="reg-email" placeholder="Enter a valid email" />
+        
+        <label for="reg-password">Password:</label>
+        <input type="password" id="reg-password" placeholder="Enter a password" />
+        
+        <label for="reg-purpose">Email Purpose:</label>
         <select id="reg-purpose">
-          <option value="">-- Select a Purpose --</option>
-          <option value="marketing">Marketing</option>
           <option value="standard">Standard</option>
+          <option value="marketing">Marketing</option>
           <option value="notifications">Notifications</option>
           <option value="newsletter">Newsletter</option>
         </select>
-      </div>
 
-      <!-- Dropdown for Account Type -->
-      <div class="form-group">
-        <label for="reg-account-type">Account Type</label>
+        <label for="reg-account-type">Account Type:</label>
         <select id="reg-account-type">
-          <option value="">-- Select an Account Type --</option>
-          <option value="company">Company</option>
           <option value="personal">Personal</option>
+          <option value="company">Company</option>
         </select>
+
+        <div class="error-message" id="error-registration"></div>
+        <button id="btn-register" class="primary-btn">Register</button>
       </div>
-
-      <button id="register-button" class="btn-primary">Register</button>
+      
+      <!-- VIEW #5: User Info Screen -->
+      <div id="view-user-info" class="view">
+        <h2>Logged In User Info</h2>
+        <div id="display-user-info"></div>
+        <!-- If you want an error message on the user info view, you can add a div here as well. -->
+      </div>
+      
     </div>
-
   </div>
 
   <script src="script.js"></script>

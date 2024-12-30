@@ -1,0 +1,20 @@
+{
+  "john@example.com": {
+    "account_type": "personal",
+    "email_purpose": "standard",
+    "mitid_username": "john_mitid",
+    "password": "$2b$12$Hu3J8nd14bngvHAU9HBMCOriCEAK7LsbwCgUAbH4apqKpV.zHiWDO"
+  },
+  "john_work@example.com": {
+    "account_type": "company",
+    "email_purpose": "marketing",
+    "mitid_username": "john_mitid",
+    "password": "$2b$12$A4o4GoJtn.79hW6Z2/N8huOG6Cnr12ZcJna0pHOAn8pBptIBuLrY2"
+  },
+  "anne@example.com": {
+    "account_type": "personal",
+    "email_purpose": "standard",
+    "mitid_username": "anne_mitid",
+    "password": "$2b$12$66K3c9UCB2byxIOZTsVdCepkLxmwSv0RkiijETLPUKyoypopYNqAK"
+  }
+}

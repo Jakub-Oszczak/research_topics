@@ -1,0 +1,11 @@
+{
+    "john_mitid": {
+      "mitid_username": "john_mitid",
+      "user_emails": ["john@example.com", "john_work@example.com"]
+    },
+    "anne_mitid": {
+      "mitid_username": "anne_mitid",
+      "user_emails": ["anne@example.com"]
+    }
+  }
+  
