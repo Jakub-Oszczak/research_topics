@@ -1,6 +1,4 @@
-/* styles.css */
 
-/* General Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #eef1f5;
@@ -13,7 +11,6 @@ body {
     color: #333;
   }
   
-  /* Inbox Container */
   .inbox-container {
     max-width: 800px;
     margin: 30px auto;
@@ -23,7 +20,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* Header */
   .inbox-header {
     display: flex;
     justify-content: space-between;
@@ -58,13 +54,11 @@ body {
     background-color: #a71d2a;
   }
   
-  /* Email Count */
   .email-count {
     margin: 15px 0;
     color: #666;
   }
   
-  /* Email List */
   .email-list {
     border-top: 1px solid #ccc;
   }
@@ -104,14 +98,12 @@ body {
     color: #555;
   }
   
-  /* No Emails Message */
   .no-emails {
     text-align: center;
     color: #999;
     padding: 20px 0;
   }
   
-  /* Buttons */
   button {
     font-family: inherit;
     border: none;
@@ -123,7 +115,6 @@ body {
     cursor: not-allowed;
   }
   
-  /* Pagination */
   .pagination {
     display: flex;
     justify-content: center;
@@ -151,7 +142,6 @@ body {
     color: #555;
   }
   
-  /* Login and Compose Containers */
   .login-container,
   .compose-container {
     max-width: 500px;
@@ -162,7 +152,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* Form Elements */
   form input,
   form textarea {
     width: 100%;
@@ -198,7 +187,6 @@ body {
     background-color: #5a6268;
   }
   
-  /* Responsive Design */
   @media (max-width: 600px) {
     .inbox-header {
       flex-direction: column;
@@ -214,7 +202,6 @@ body {
     }
   }
 
-  /* Email Detail */
   .email-detail-container {
     max-width: 600px;
     margin: 30px auto;

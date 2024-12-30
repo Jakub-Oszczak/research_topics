@@ -1,4 +1,3 @@
-// components/Inbox.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import EmailItem from './EmailItem';
@@ -18,7 +17,6 @@ function Inbox() {
     } else {
       fetchEmails();
     }
-    // eslint-disable-next-line
   }, []);
 
   const fetchEmails = async () => {

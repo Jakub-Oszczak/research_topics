@@ -1,4 +1,3 @@
-// components/Compose.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -14,7 +13,6 @@ function Compose() {
   const handleSend = async (e) => {
     e.preventDefault();
 
-    // Check if the receiver email is the same as the sender email
     if (receiverEmail === senderEmail) {
       setError("You cannot send an email to yourself.");
       return;

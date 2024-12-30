@@ -1,4 +1,3 @@
-// components/Login.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -12,7 +11,6 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      // Check if user exists
       const response = await axios.get('/users', {
         headers: {
           email: email,
@@ -26,18 +24,15 @@ function Login() {
         navigate('/inbox');
       }
     } catch (error) {
-      // If user doesn't exist, display an error message
       setError('Invalid email or password');
     }
   };
 
   const handleForgotPassword = () => {
-    // Redirect to forgot password page
     navigate('/forgot-password');
   };
 
   const handleMitIDLogin = () => {
-    // Redirect to MitID login page
     navigate('/mitid-login');
   };
 
