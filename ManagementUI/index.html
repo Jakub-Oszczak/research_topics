@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mailing Service Popup</title>
   
-  <!-- Google Fonts (Poppins) for a modern look -->
+  <!-- Google Fonts (Poppins) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link 
@@ -13,6 +13,7 @@
     rel="stylesheet"
   >
 
+  <!-- Link to CSS file -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -22,12 +23,12 @@
       <!-- VIEW #1: MitID Screen -->
       <div id="view-mitid" class="view active-view">
         <div class="view-heading">
+          <h2>Log in with MitID</h2>
           <img 
-            src="https://via.placeholder.com/120x40?text=MitID+Logo" 
+            src="./assets/mitid_logo.png" 
             alt="MitID Logo" 
             class="mitid-logo"
           />
-          <h2>Log in with MitID</h2>
         </div>
         <label for="mitid-username">MitID Username:</label>
         <input type="text" id="mitid-username" placeholder="Enter MitID username" />
@@ -39,14 +40,13 @@
       <div id="view-qr" class="view">
         <h2>Scan this QR code with your MitID app</h2>
         <img 
-          src="https://via.placeholder.com/200x200?text=QR+Code" 
+          src="./assets/qr_placeholder.png" 
           alt="QR Code" 
           class="qr-code-img"
         />
         <p class="qr-instructions">
           Please wait... verifying your MitID on the server.
         </p>
-        <!-- We'll also place an error message here, in case something fails after 2s -->
         <div class="error-message" id="error-qr"></div>
       </div>
       
@@ -94,7 +94,6 @@
       <div id="view-user-info" class="view">
         <h2>Logged In User Info</h2>
         <div id="display-user-info"></div>
-        <!-- If you want an error message on the user info view, you can add a div here as well. -->
       </div>
       
     </div>

@@ -1,8 +1,5 @@
 /*
-  1) Overall page styling
-  2) Popup container with a nice box shadow
-  3) Some modern look & feel 
-  4) Smooth transitions for more appealing UI
+  General page styling with smooth transitions and a modern look
 */
 
 * {
@@ -14,21 +11,26 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
 }
 
-/* Make background darker, so popup stands out */
+/* Darkened backdrop to make popup stand out */
 .backdrop {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .popup-container {
-  width: 400px;
+  width: 90%;
+  max-width: 400px;
   background: #fff;
   border-radius: 12px;
   padding: 30px 40px;
@@ -41,28 +43,35 @@ body {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* Each view hidden by default */
+/* Each view is hidden by default */
 .view {
   display: none;
 }
 
-/* The currently active view is shown */
+/* Only the active view is shown */
 .active-view {
   display: block;
 }
 
-/* Heading inside each view */
+/* View heading styling */
 .view-heading {
-  display: flex;
-  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.view-heading h2 {
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .mitid-logo {
-  margin-right: 0.5rem;
+  display: block;
+  margin: 0 auto 20px;
+  width: 100px;
+  height: auto;
 }
 
-/* Basic input styling */
+/* Form labels and inputs */
 label {
   display: block;
   margin-top: 15px;
@@ -79,17 +88,20 @@ input, select {
   font-size: 14px;
 }
 
-/* Primary button style */
+/* Button styling */
 .primary-btn {
-  display: inline-block;
+  display: block;
+  width: 100%;
   background-color: #667eea;
   color: #fff;
   border: none;
-  padding: 10px 16px;
+  padding: 12px;
   font-size: 14px;
+  font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s ease;
+  text-align: center;
 }
 .primary-btn:hover {
   background-color: #5a67d8;
@@ -104,18 +116,23 @@ input, select {
 
 /* Link styling */
 .link-register {
+  display: block;
+  text-align: center;
   font-size: 0.9em;
   color: #667eea;
   text-decoration: none;
+  margin-top: 10px;
 }
 .link-register:hover {
   text-decoration: underline;
 }
 
-/* Additional decorations */
+/* QR Code styling */
 .qr-code-img {
   display: block;
   margin: 0 auto 1rem;
+  max-width: 200px;
+  height: auto;
 }
 
 .qr-instructions {
@@ -125,9 +142,32 @@ input, select {
   margin-bottom: 0;
 }
 
+/* User Info Styling */
 #display-user-info p {
   background: #f9fafb;
   padding: 8px;
   border-radius: 6px;
   margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .popup-container {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .primary-btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  label, input, select {
+    font-size: 13px;
+  }
+
+  .view-heading h2 {
+    font-size: 1.2rem;
+  }
 }
